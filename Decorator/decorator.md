@@ -29,6 +29,9 @@ Je hebt een koffiezaak met allemaal soorten dranken(esspresso, decaf, chocomelk,
          public String getDescription() {
                return description;
          }
+         protected void setDescription (String description )
+            this.description = description
+         }
 
          public abstract double cost();
    }
@@ -107,8 +110,7 @@ Je hebt een koffiezaak met allemaal soorten dranken(esspresso, decaf, chocomelk,
 4. ```java
    public class Espresso extends Beverage {
          Espresso() {
-               super();
-               super.description = "Espresso";
+               setDescription("Espresso");
          }
 
          @Override
@@ -121,8 +123,7 @@ Je hebt een koffiezaak met allemaal soorten dranken(esspresso, decaf, chocomelk,
    ```java
    public class Decaf extends Beverage {
          Decaf() {
-               super();
-               super.description = "Decaf";
+               setDescription("Decaf")
          }
 
          @Override
@@ -135,8 +136,7 @@ Je hebt een koffiezaak met allemaal soorten dranken(esspresso, decaf, chocomelk,
    ```java
    public class Tea extends Beverage {
          Tea() {
-               super();
-               super.description = "Tea";
+               setDescription("Tea")
          }
 
          @Override
@@ -149,8 +149,7 @@ Je hebt een koffiezaak met allemaal soorten dranken(esspresso, decaf, chocomelk,
    ```java
    public class HotChocolate extends Beverage {
          HotChocolate() {
-               super();
-               super.description = "Hot Chocolate";
+               setDescription("HotChocolate")
          }
 
          @Override
